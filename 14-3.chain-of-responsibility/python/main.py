@@ -17,7 +17,7 @@ class Handler(abc.ABC):
 class FilterA(Handler):
     def handleRequest(self, input_list):
         if len(input_list):
-         input_list = [i for i in input_list if i != 'A']
+            input_list = [i for i in input_list if i != 'A']
         if self.successor:
             return self.successor.handleRequest(input_list)
         else:
@@ -26,7 +26,7 @@ class FilterA(Handler):
 class FilterB(Handler):
     def handleRequest(self, input_list):
         if len(input_list):
-         input_list = [i for i in input_list if i != 'B']
+            input_list = [i for i in input_list if i != 'B']
         if self.successor:
             return self.successor.handleRequest(input_list)
         else:
@@ -35,7 +35,7 @@ class FilterB(Handler):
 class FilterC(Handler):
     def handleRequest(self,input_list):
         if len(input_list):
-         input_list = [i for i in input_list if i != 'C']
+            input_list = [i for i in input_list if i != 'C']
         if self.successor:
             return self.successor.handleRequest(input_list)
         else:
